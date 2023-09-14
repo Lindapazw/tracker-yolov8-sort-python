@@ -2,6 +2,9 @@
 
 This repository contains a Python script for real-time object detection using YOLO (You Only Look Once) and object tracking using SORT (Simple Online and Realtime Tracking). The script processes a video file to detect objects and assign unique IDs to them for tracking.
 
+![Captura de pantalla 2023-09-14 123838](https://github.com/Lindapazw/tracker-yolov8-sort-python/assets/88910652/56e9fb70-0801-46a1-9c08-709969a6f3ac)
+
+
 ## Dependencies
 
 - `numpy`: For numerical operations.
