@@ -4,7 +4,7 @@ from ultralytics import YOLO
 from short import Sort
 
 if __name__ == '__main__':
-    cap = cv2.VideoCapture("people.avi")
+    cap = cv2.VideoCapture("people2.avi")
 
     model = YOLO("yolov8n.pt")
 
@@ -19,7 +19,7 @@ if __name__ == '__main__':
         results = model(frame, stream=True)
 
         for res in results:
-            filtered_indices = np.where(res.boxes.conf.cpu().numpy() > 0.7)[0]
+            filtered_indices = np.where(res.boxes.conf.cpu().numpy() > 0.3)[0]
             boxes = res.boxes.xyxy.cpu().numpy()[filtered_indices].astype(int)
             tracks = tracker.update(boxes)
             tracks = tracks.astype(int)
